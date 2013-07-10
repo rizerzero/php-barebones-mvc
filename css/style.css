@@ -1,0 +1,90 @@
+body,h1,h2,h3,ul,li,p { margin: 0; padding: 0; }
+body {
+	background-color: #FFF;
+	color: #111;
+	font-family: Verdana;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+} a:hover { text-decoration: underline; }
+
+#container {
+	text-align: center;
+}
+
+/* -- common master width declaration -- */
+#content, #header, #body, #footer { width: 1000px; }
+/* -- common sidebar width declarations -- */
+#topmenu	{ padding-left:	160px; }
+#sidebar	{ width:		160px; }
+#body-main	{ margin-left:	160px; }
+#breadcrumbs { margin-left:	160px; }
+
+#content {
+	text-align: left;
+	background-color: #DDD;
+	margin: 0px auto;
+}
+#header { 
+	background-color: #BDD;
+	text-align: left;
+}
+	/*#topmenu { padding-left: 140px; }		/* see common sidebar width above */
+	#topmenu ul {
+		margin: 0px auto;
+	}
+	#topmenu li {
+		list-style-type: none;
+		display: inline;
+	}
+		#topmenu li a { 
+			padding:2px 20px 2px 20px;
+			background-color: #CAC;
+			/*border: 1px solid black;
+			border-bottom: 0;*/
+		}
+			#topmenu li a:hover { background-color: #DBD; }
+			#topmenu li a.active {
+				background-color: #DBD;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+#body {
+	background-color: #DBD;
+	overflow: visible;
+}
+	#sidebar {
+		background-color: #BBD;
+		/*width: 140px;			/* see common sidebar width above */
+		/*margin-left: -100px;*/
+		float: left;
+		/*position: relative;*/
+	} #sidebar ul {
+		list-style-type: none;
+		padding: 5px;
+	}
+	#breadcrumbs {
+		padding: 5px;
+		padding-bottom: 0px;
+		height: 15px;
+		font-size: 11px;
+	}
+		#breadcrumbs ul {
+			float: left;
+			clear: none;
+			list-style-type: none;
+		}
+		#breadcrumbs li { display: inline; }
+	#user-info, #user-info p {
+		float: right;
+		clear: none;
+		text-align: right;
+		line-height: auto;
+	}
+	#body-main { padding: 5px; }
+			/*#breadcrumbs li:before { content: "\BB"; }*/
+#footer { background-color: #DDB; }
