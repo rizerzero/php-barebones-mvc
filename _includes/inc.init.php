@@ -23,4 +23,4 @@ $registry->db = Mysql_DB::getInstance();
 $registry->db->initDB($database_credentials);
 unset($database_credentials);
 
-$registry->http_root = 'http://fubes2000.savagenoodle.com/sandbox/mvc/';
+$registry->http_root = 'http://www.site.com/path/to/mvc/';
