@@ -1,2 +1,2 @@
 *.swp
-_includes/inc.init.php
+_includes/inc.db_cfg.php
