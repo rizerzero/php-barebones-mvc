@@ -46,7 +46,11 @@ public function doQuery($query, $params=NULL) {
 	if(!$query) {
 		return NULL;
 	} else {
-		$sth = $dbh->prepare($query);
+		if( ! $sth = $dbh->prepare($query) ) {
+			$err_arr = $dbh->errorInfo();
+			$err_msg = sprintf("SQLSTATE ERR: %s<br />\nmySQL ERR: %s<br />\nMessage: %s<br />\n", $err_arr[0], $err_arr[1], $err_arr[2]);
+			Throw new Exception($err_msg);
+		}
 		if($sth->execute($params)) {
 			$this->query_time += microtime(true) - $timer;
 			$this->query_count++;
